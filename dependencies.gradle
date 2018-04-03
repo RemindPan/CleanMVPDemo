@@ -1,0 +1,55 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext{
+    //Library Dependencies
+    rxJavaVersion = '2.0.2'
+    rxAndroidVersion = '2.0.1'
+    javaxAnnotationVersion = '1.0'
+    javaxInjectVersion = '1'
+    gsonVersion = '2.8.2'
+    okHttpVersion = '3.9.0'
+    androidAnnotationsVersion = '21.0.3'
+    daggerVersion = '2.11'
+    recyclerViewVersion = '21.0.3'
+    butterKnifeVersion = '7.0.1'
+    retrofitVersion = "2.3.0"
+
+    domainDependencies = [
+        javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+        javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+        rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+    ]
+
+    dataDependencies = [
+        daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
+        dagger:             "com.google.dagger:dagger:${daggerVersion}",
+        okHttp:             "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+        gson:               "com.google.code.gson:gson:${gsonVersion}",
+        rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+        rxAndroid:          "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+        javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+        javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+        androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+        retrofit2                  : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+        retrofit2AdapterRxjava   : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+        retrofit2ConverterGson   : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+        retrofit2ConverterJackson: "com.squareup.retrofit2:converter-jackson:${retrofitVersion}",
+        okhttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+    ]
+
+    appDependencies = [
+        daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
+        dagger:             "com.google.dagger:dagger:${daggerVersion}",
+        butterKnife:        "com.jakewharton:butterknife:${butterKnifeVersion}",
+        recyclerView:       "com.android.support:recyclerview-v7:${recyclerViewVersion}",
+        rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+        rxAndroid:          "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+        javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}"
+    ]
+
+    //for test
+}
