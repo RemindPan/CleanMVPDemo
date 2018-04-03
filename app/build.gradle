@@ -19,10 +19,23 @@ android {
 }
 
 dependencies {
+    def presentationDependencies = rootProject.ext.appDependencies
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':domain')
     compile project(':data')
 
+    annotationProcessor presentationDependencies.daggerCompiler
+    compile presentationDependencies.dagger
+    //butterknife
+    compile presentationDependencies.butterKnife
+    annotationProcessor presentationDependencies.butterknifeCompiler
+    //recylerview
+    compile presentationDependencies.recyclerView
+    //rxjava
+    compile presentationDependencies.rxJava
+    compile presentationDependencies.rxAndroid
+    provided presentationDependencies.javaxAnnotation
 
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
