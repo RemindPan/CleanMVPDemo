@@ -5,6 +5,8 @@ import com.example.domain.executor.ThreadExecutor;
 import com.example.domain.model.Weather;
 import com.example.domain.respository.ApplicationRepository;
 
+import javax.inject.Inject;
+
 import io.reactivex.Observable;
 
 /**
@@ -15,6 +17,7 @@ public class GetWeatherInteractor extends ApplicationInteractor<Weather> {
 
     String cityId;
 
+    @Inject
     public GetWeatherInteractor(ApplicationRepository repository, ThreadExecutor executor, PostExecutionThread postExecutionThread) {
         super(repository, executor, postExecutionThread);
     }

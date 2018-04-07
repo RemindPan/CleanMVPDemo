@@ -6,13 +6,43 @@
     android:layout_height="match_parent"
     tools:context="com.example.tinyfight.MainActivity">
 
+    <com.example.tinyfight.widget.MaterialSpinner
+        android:id="@+id/ms_selector"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="120dp"
+        android:layout_height="30dp"/>
+
     <TextView
+        android:id="@+id/tv_city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ms_selector"
+        tools:text="3ewrewq" />
+
+    <TextView
+        android:id="@+id/tv_weather_temp_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_city_name"
+        app:layout_constraintTop_toBottomOf="@+id/ms_selector"
+        tools:text="dsfdsfsd" />
+
+    <TextView
+        android:id="@+id/tv_weather_temp_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_city_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_weather_temp_high"
+        tools:text="dsfdsfsd" />
 
 </android.support.constraint.ConstraintLayout>

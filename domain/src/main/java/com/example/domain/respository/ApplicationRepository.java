@@ -12,4 +12,6 @@ public interface ApplicationRepository {
 
     Observable<Weather> getWeather(String cityId);
 
+    Observable<String> getTownId(String cityName);
+
 }

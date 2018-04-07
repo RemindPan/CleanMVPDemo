@@ -51,7 +51,7 @@ public class AppModule {
     @Singleton
     @Provides
     ApplicationRepository provideRepository(WeatherApi api){
-        return new ApplicationDataRepository(api);
+        return new ApplicationDataRepository(mContext,api);
     }
 
     @Provides

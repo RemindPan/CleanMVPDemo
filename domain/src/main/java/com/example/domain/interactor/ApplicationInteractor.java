@@ -4,6 +4,8 @@ import com.example.domain.executor.PostExecutionThread;
 import com.example.domain.executor.ThreadExecutor;
 import com.example.domain.respository.ApplicationRepository;
 
+import javax.inject.Inject;
+
 /**
  * Created by tinyfight on 2018/3/26.
  */

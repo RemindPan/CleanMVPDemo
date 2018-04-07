@@ -11,7 +11,7 @@ import com.example.tinyfight.di.DaggerAppComponent;
  */
 
 public class WeatherApplication extends Application {
-    private AppComponent appCompent;
+    private static AppComponent appComponent;
     private static WeatherApplication sApp;
 
     @Override
@@ -19,7 +19,15 @@ public class WeatherApplication extends Application {
         super.onCreate();
         sApp = this;
         AppModule module = new AppModule(sApp);
-        appCompent = DaggerAppComponent.builder().appModule(module).build();
-        appCompent.inject(this);
+        appComponent = DaggerAppComponent.builder().appModule(module).build();
+        appComponent.inject(this);
+    }
+
+    public static WeatherApplication getInstance(){
+        return sApp;
+    }
+
+    public AppComponent getComponent(){
+        return appComponent;
     }
 }

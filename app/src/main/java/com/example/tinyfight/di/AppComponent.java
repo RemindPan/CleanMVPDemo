@@ -20,16 +20,12 @@ import dagger.Module;
 @Singleton
 @Component(modules = AppModule.class)
 public interface AppComponent {
-    void inject(MainActivity activity);
 
     void inject(Application application);
 
-    Context provideContext();
-
     ApplicationRepository provideRepository();
 
-    PostExecutionThread providePostExecutionThread();
+    PostExecutionThread providePostInteractionThread();
 
     ThreadExecutor provideThreadExecutor();
-
 }

@@ -1,6 +1,6 @@
 package com.example.data.net;
 
-import com.example.domain.model.Weather;
+import com.example.data.entity.WeatherEntity;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -13,6 +13,6 @@ import retrofit2.http.Query;
 public interface WeatherApi {
 
     @GET
-    Observable<Weather> getWeather(@Query("city") String cityId);
+    Observable<WeatherEntity> getWeather(@Query("city") String cityId);
 
 }

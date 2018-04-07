@@ -1,5 +1,6 @@
 package com.example.data.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -8,7 +9,7 @@ import java.util.List;
  * app展示所需业务数据.
  */
 
-public class WeatherEntity {
+public class WeatherEntity implements Serializable{
 
     /**
      * status : OK
