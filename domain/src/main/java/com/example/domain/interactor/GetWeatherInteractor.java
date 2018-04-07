@@ -15,19 +15,19 @@ import io.reactivex.Observable;
 
 public class GetWeatherInteractor extends ApplicationInteractor<Weather> {
 
-    String cityId;
+    String townId;
 
     @Inject
     public GetWeatherInteractor(ApplicationRepository repository, ThreadExecutor executor, PostExecutionThread postExecutionThread) {
         super(repository, executor, postExecutionThread);
     }
 
-    public void setCityId(String cityId){
-        this.cityId = cityId;
+    public void seTownId(String townId){
+        this.townId = townId;
     }
 
     @Override
     protected Observable<Weather> buildObservable() {
-        return repository.getWeather(cityId);
+        return repository.getWeather(townId);
     }
 }

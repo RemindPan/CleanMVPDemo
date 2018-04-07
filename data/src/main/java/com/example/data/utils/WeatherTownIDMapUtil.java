@@ -20,13 +20,13 @@ public class WeatherTownIDMapUtil {
 
     public static String getTownID(int code){
         switch (code){
-            case 0x01:
+            case 0:
                 return townIDMap.get("beijing");
-            case 0x02:
+            case 1:
                 return townIDMap.get("shanghai");
-            case 0x03:
+            case 2:
                 return townIDMap.get("tianjin");
-            case 0x04:
+            case 3:
                 return townIDMap.get("chongqing");
         }
         return "";

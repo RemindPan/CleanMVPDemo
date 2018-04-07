@@ -12,7 +12,7 @@ import retrofit2.http.Query;
 
 public interface WeatherApi {
 
-    @GET
+    @GET()
     Observable<WeatherEntity> getWeather(@Query("city") String cityId);
 
 }

@@ -7,6 +7,6 @@ package com.example.data.config;
 public class AppTestWeatherConfig implements WeatherConfig {
     @Override
     public String getBaseUrl() {
-        return "http://tj.nineton.cn/Heart/index/all";
+        return "http://tj.nineton.cn/Heart/index/all/";
     }
 }
