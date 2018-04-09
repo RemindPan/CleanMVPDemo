@@ -12,7 +12,12 @@ import retrofit2.http.Query;
 
 public interface WeatherApi {
 
-    @GET()
-    Observable<WeatherEntity> getWeather(@Query("city") String cityId);
+    @GET("all")
+    Observable<WeatherEntity> getWeather(@Query("city") String cityId,
+                                         @Query("language") String lang,
+                                         @Query("unit") String unit,
+                                         @Query("aqi") String aqi,
+                                         @Query("alarm") String alarm,
+                                         @Query("key") String key);
 
 }

@@ -44,7 +44,7 @@ public class ApplicationDataRepository implements ApplicationRepository {
     @Override
     public Observable<Weather> getWeather(String cityId) {
 
-        Observable<WeatherEntity> sourceObservable = weatherApi.getWeather(cityId);
+        Observable<WeatherEntity> sourceObservable = weatherApi.getWeather(cityId,"","","","","");
         Observable<Weather> dest = sourceObservable.map(new Function<WeatherEntity, Weather>() {
             @Override
             public Weather apply(WeatherEntity weatherEntity) throws Exception {
