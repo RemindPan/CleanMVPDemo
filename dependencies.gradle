@@ -18,6 +18,13 @@ ext{
     butterKnifeVersion = '8.8.1'
     retrofitVersion = "2.3.0"
 
+    //test
+    jUnitVersion = '4.12'
+    assertJVersion = '1.7.1'
+    mockitoVersion = '1.9.5'
+    robolectricVersion = '3.1.1'
+
+
     domainDependencies = [
         javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
         javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
@@ -52,5 +59,17 @@ ext{
         javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}"
     ]
 
-    //for test
+    //test
+    domainTestDependencies = [
+        junit:              "junit:junit:${jUnitVersion}",
+        mockito:            "org.mockito:mockito-core:${mockitoVersion}",
+        assertj:            "org.assertj:assertj-core:${assertJVersion}"
+    ]
+
+    dataTestDependencies = [
+        junit:              "junit:junit:${jUnitVersion}",
+        assertj:            "org.assertj:assertj-core:${assertJVersion}",
+        mockito:            "org.mockito:mockito-core:${mockitoVersion}",
+        robolectric:        "org.robolectric:robolectric:${robolectricVersion}",
+    ]
 }

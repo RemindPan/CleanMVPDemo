@@ -28,6 +28,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':domain')
     def dataDependencies = rootProject.ext.dataDependencies
+    def testDependencies = rootProject.ext.dataTestDependencies
+
     provided dataDependencies.javaxAnnotation
     compile dataDependencies.javaxInject
     compile dataDependencies.okHttp
@@ -39,6 +41,11 @@ dependencies {
     compile dataDependencies.retrofit2
     compile dataDependencies.retrofit2AdapterRxjava
     compile dataDependencies.retrofit2ConverterGson
+
+    testCompile testDependencies.junit
+    testCompile testDependencies.assertj
+    testCompile testDependencies.mockito
+    testCompile testDependencies.robolectric
 
     implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'

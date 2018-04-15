@@ -13,10 +13,15 @@ sourceSets {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     def domainDependencies = rootProject.ext.domainDependencies
+    def domainTestDependencies = rootProject.ext.domainTestDependencies
 
     provided domainDependencies.javaxAnnotation
     compile domainDependencies.javaxInject
     compile domainDependencies.rxJava
+
+    testCompile domainTestDependencies.junit
+    testCompile domainTestDependencies.mockito
+    testCompile domainTestDependencies.assertj
 }
 
 sourceCompatibility = "1.7"
